@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestesNHibernate.Models
+namespace TestesEntity.Models
 {
     internal class Produto
     {
