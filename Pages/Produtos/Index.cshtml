@@ -35,32 +35,39 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Produto) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.grupo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.especificacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.unidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.preco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.quantidade)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Produto)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.grupo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.especificacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.unidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quantidade)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.id" class="btn btn-sm btn-success">
+                        <i class="bi-pencil"></i>
+                    </a>
+                    <a asp-page="./Details" asp-route-id="@item.id" class="btn btn-sm btn-primary">
+                        <i class="bi-list"></i>
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.id" class="btn btn-sm btn-danger">
+                        <i class="bi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
