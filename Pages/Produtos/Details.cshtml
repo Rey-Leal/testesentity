@@ -1,0 +1,55 @@
+﻿@page
+@model TestesEntity.Pages.Produtos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.grupo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.grupo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.especificacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.especificacao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.unidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.unidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.preco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.preco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.quantidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.quantidade)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Produto.id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

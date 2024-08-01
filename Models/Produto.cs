@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TestesEntity.Models
 {
-    internal class Produto
+    public class Produto
     {
-        public virtual int id { get; set; }
-        public virtual string grupo { get; set; }
-        public virtual string nome { get; set; }
-        public virtual string especificacao { get; set; }
-        public virtual string unidade { get; set; }
-        public virtual double preco { get; set; }
-        public virtual int quantidade { get; set; }
+        public int id { get; set; }
+        public string grupo { get; set; }
+        public string nome { get; set; }
+        public string especificacao { get; set; }
+        public string unidade { get; set; }
+        public decimal preco { get; set; }
+        public int quantidade { get; set; }
     }
 }

@@ -1,0 +1,58 @@
+﻿@page
+@model TestesEntity.Pages.Produtos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.grupo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.grupo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.especificacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.especificacao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.unidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.unidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.preco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.preco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.quantidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produto.quantidade)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Produto.id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

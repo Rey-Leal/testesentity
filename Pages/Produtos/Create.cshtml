@@ -1,0 +1,59 @@
+﻿@page
+@model TestesEntity.Pages.Produtos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Produto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Produto.grupo" class="control-label"></label>
+                <input asp-for="Produto.grupo" class="form-control" />
+                <span asp-validation-for="Produto.grupo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.nome" class="control-label"></label>
+                <input asp-for="Produto.nome" class="form-control" />
+                <span asp-validation-for="Produto.nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.especificacao" class="control-label"></label>
+                <input asp-for="Produto.especificacao" class="form-control" />
+                <span asp-validation-for="Produto.especificacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.unidade" class="control-label"></label>
+                <input asp-for="Produto.unidade" class="form-control" />
+                <span asp-validation-for="Produto.unidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.preco" class="control-label"></label>
+                <input asp-for="Produto.preco" class="form-control" />
+                <span asp-validation-for="Produto.preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.quantidade" class="control-label"></label>
+                <input asp-for="Produto.quantidade" class="form-control" />
+                <span asp-validation-for="Produto.quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

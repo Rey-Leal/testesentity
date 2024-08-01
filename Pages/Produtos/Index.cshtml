@@ -1,0 +1,66 @@
+﻿@page
+@model TestesEntity.Pages.Produtos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].grupo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].especificacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].unidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].quantidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Produto) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.grupo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.especificacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantidade)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
